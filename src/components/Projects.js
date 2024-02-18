@@ -11,35 +11,54 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
+      title: "NEXUS",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Portfolio Website",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "Magic Notes",
       description: "Design & Development",
       imgUrl: projImg3,
     },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg1,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg2,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
+  ];
+  const projects2 = [
+    {
+      title: "Bookmarks",
+      description: "Design & Development",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Mewok",
+      description: "Design & Development",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Court Counter",
+      description: "Design & Development",
+      imgUrl: projImg3,
+    },
+  ];
+  const projects3 = [
+    {
+      title: "OMEGA",
+      description: "Design & Development",
+      imgUrl: projImg1,
+    },
+    {
+      title: "NEXUS BlockChain Based Platform",
+      description: "Design & Development",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Supply Chain Management",
+      description: "Design & Development",
+      imgUrl: projImg3,
+    },
   ];
 
   return (
@@ -80,10 +99,32 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <Row>
+                          {
+                            projects2.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                />
+                              )
+                            })
+                          }
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <Row>
+                          {
+                            projects3.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                />
+                              )
+                            })
+                          }
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
